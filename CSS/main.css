@@ -181,7 +181,7 @@ header .container nav ul li a {
     display: none;
   }
 
-  header .container nav .toggle-menu:hover+ul {
+  header .container nav .toggle-menu:hover + ul {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -221,7 +221,7 @@ header .container nav .form i {
 /* Start Landing */
 .landing {
   background-color: #1f2021;
-  background-image: url("/Template-2/Image/landing.jpg");
+  background-image: url("Image/landing.jpg");
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -383,7 +383,7 @@ header .container nav .form i {
 .desgin {
   max-width: 100%;
   height: 600px;
-  background-image: url("/Template-2/Image/design-features.jpg");
+  background-image: url("Image/design-features.jpg");
   background-size: cover;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -436,7 +436,7 @@ header .container nav .form i {
   margin-right: 20px;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .desgin .desgin-content .image {
     display: none;
   }
@@ -463,7 +463,6 @@ header .container nav .form i {
 
 .portfolio .shuffle ul li {
   margin-right: 20px;
-
 }
 
 .portfolio .shuffle ul li.active {
@@ -487,7 +486,7 @@ header .container nav .form i {
 
 .portfolio .grid-container-box .box img {
   max-width: 100%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .portfolio .grid-container-box .box:hover img {
@@ -501,7 +500,7 @@ header .container nav .form i {
   background-color: wheat;
   width: 100%;
   display: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .portfolio .grid-container-box .box:hover .caption {
@@ -511,13 +510,11 @@ header .container nav .form i {
 .portfolio .grid-container-box .box .caption h4 {
   padding-bottom: 10px;
   font-weight: normal;
-
 }
 
 .portfolio .grid-container-box .box .caption p {
   font-size: 14px;
   color: #777;
-
 }
 
 .portfolio .container a {
@@ -613,7 +610,7 @@ header .container nav .form i {
   max-width: 100%;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url(/Template-2/Image/stats.png);
+  background-image: url(Image/stats.png);
   background-size: cover;
   position: relative;
 }
@@ -636,14 +633,12 @@ header .container nav .form i {
   z-index: 1;
   justify-content: space-between;
   align-content: center;
-
 }
 
 .stats .grid-container .box {
   padding: 50px;
   text-align: center;
   font-weight: bold;
-
 }
 
 .stats .grid-container .box i {
@@ -709,7 +704,6 @@ header .container nav .form i {
   }
 }
 
-
 .our-skills .testimonials {
   display: flex;
   flex-wrap: wrap;
@@ -722,7 +716,7 @@ header .container nav .form i {
   margin: 0 0 20px;
 }
 
-.our-skills .testimonials>p {
+.our-skills .testimonials > p {
   color: #a2a2a2;
   margin-bottom: 30px;
   line-height: 160%;
@@ -804,10 +798,9 @@ header .container nav .form i {
 .our-skills .skills .prog-holder h4 {
   font-weight: normal;
   margin-bottom: 20px;
-
 }
 
-.our-skills .skills .prog-holder h4+div {
+.our-skills .skills .prog-holder h4 + div {
   background-color: #dedadc;
   width: 100%;
   height: 30px;
@@ -904,7 +897,7 @@ header .container nav .form i {
 .quote {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url(/Template-2/Image/quote.jpg);
+  background-image: url(Image/quote.jpg);
   background-size: cover;
   position: relative;
   text-align: center;
@@ -1026,7 +1019,7 @@ header .container nav .form i {
   font-size: 20px;
 }
 
-.pricing .container>a {
+.pricing .container > a {
   display: block;
   width: fit-content;
   margin: 0 auto;
@@ -1042,13 +1035,13 @@ header .container nav .form i {
 .subscribe {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url(/Template-2/Image/subscribe.jpg);
+  background-image: url(Image/subscribe.jpg);
   background-size: cover;
   color: white;
   position: relative;
 }
 
-.subscribe::before{
+.subscribe::before {
   content: "";
   width: 100%;
   height: 100%;
