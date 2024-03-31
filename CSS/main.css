@@ -221,7 +221,7 @@ header .container nav .form i {
 /* Start Landing */
 .landing {
   background-color: #1f2021;
-  background-image: url("Image/landing.jpg");
+  background-image: url("../Image/landing.jpg");
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -383,7 +383,7 @@ header .container nav .form i {
 .desgin {
   max-width: 100%;
   height: 600px;
-  background-image: url("Image/design-features.jpg");
+  background-image: url("../Image/design-features.jpg");
   background-size: cover;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -610,7 +610,7 @@ header .container nav .form i {
   max-width: 100%;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url(Image/stats.png);
+  background-image: url(../Image/stats.png);
   background-size: cover;
   position: relative;
 }
@@ -897,7 +897,7 @@ header .container nav .form i {
 .quote {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url(Image/quote.jpg);
+  background-image: url(../Image/quote.jpg);
   background-size: cover;
   position: relative;
   text-align: center;
@@ -1035,7 +1035,7 @@ header .container nav .form i {
 .subscribe {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url(Image/subscribe.jpg);
+  background-image: url(../Image/subscribe.jpg);
   background-size: cover;
   color: white;
   position: relative;
