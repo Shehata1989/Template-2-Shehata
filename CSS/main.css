@@ -62,7 +62,6 @@ a {
   .container {
     width: 1170px;
   }
-
   .landing {
     background-position: right center;
   }
@@ -155,6 +154,7 @@ header .container nav {
 header .container nav .toggle-menu {
   color: white;
   font-size: 22px;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -181,7 +181,7 @@ header .container nav ul li a {
     display: none;
   }
 
-  header .container nav .toggle-menu:hover + ul {
+  header .container nav ul.active {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -221,7 +221,7 @@ header .container nav .form i {
 /* Start Landing */
 .landing {
   background-color: #1f2021;
-  background-image: url("../Image/landing.jpg");
+  background-image: url("../Image/landing-1.jpg");
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -272,51 +272,12 @@ header .container nav .form i {
   font-size: 35px;
 }
 
-.landing .fas.fa-angle-right.change-background {
-  right: 30px;
-}
-
-.landing .fas.fa-angle-left.change-background {
-  left: 30px;
-}
 
 @media (max-width: 767px) {
   .landing .text {
     width: 100%;
   }
-
-  .landing .fas.fa-angle-right.change-background {
-    display: none;
-  }
-
-  .landing .fas.fa-angle-left.change-background {
-    display: none;
-  }
 }
-
-.landing .bullets {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.landing .bullets li {
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
-  margin-left: 10px;
-  margin-bottom: 30px;
-}
-
-.landing .bullets .active {
-  background-color: var(--main-color);
-  border-color: var(--main-color);
-}
-
 /* End Landing */
 /* Start Service */
 .services {
@@ -455,23 +416,6 @@ header .container nav .form i {
   padding-bottom: var(--section-padding);
 }
 
-.portfolio .shuffle ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.portfolio .shuffle ul li {
-  margin-right: 20px;
-}
-
-.portfolio .shuffle ul li.active {
-  background-color: var(--main-color);
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
 .portfolio .grid-container-box {
   margin-top: 60px;
   display: grid;
@@ -515,14 +459,6 @@ header .container nav .form i {
 .portfolio .grid-container-box .box .caption p {
   font-size: 14px;
   color: #777;
-}
-
-.portfolio .container a {
-  background-color: var(--main-color);
-  padding: 10px 20px;
-  display: block;
-  width: fit-content;
-  margin: 30px auto;
 }
 
 @media (max-width: 1199px) {
@@ -808,7 +744,7 @@ header .container nav .form i {
   position: relative;
 }
 
-.our-skills .skills .prog-holder div.one::before {
+.our-skills .skills .prog-holder.active div.one::before {
   content: "";
   position: absolute;
   top: 0;
@@ -818,7 +754,7 @@ header .container nav .form i {
   background-color: var(--main-color);
 }
 
-.our-skills .skills .prog-holder div.one::after {
+.our-skills .skills .prog-holder.active div.one::after {
   content: "90%";
   position: absolute;
   width: fit-content;
@@ -829,7 +765,7 @@ header .container nav .form i {
   padding: 5px;
 }
 
-.our-skills .skills .prog-holder div.two::before {
+.our-skills .skills .prog-holder.active div.two::before {
   content: "";
   position: absolute;
   top: 0;
@@ -839,7 +775,7 @@ header .container nav .form i {
   background-color: var(--main-color);
 }
 
-.our-skills .skills .prog-holder div.two::after {
+.our-skills .skills .prog-holder.active div.two::after {
   content: "85%";
   position: absolute;
   width: fit-content;
@@ -850,7 +786,7 @@ header .container nav .form i {
   padding: 5px;
 }
 
-.our-skills .skills .prog-holder div.three::before {
+.our-skills .skills .prog-holder.active div.three::before {
   content: "";
   position: absolute;
   top: 0;
@@ -860,7 +796,7 @@ header .container nav .form i {
   background-color: var(--main-color);
 }
 
-.our-skills .skills .prog-holder div.three::after {
+.our-skills .skills .prog-holder.active div.three::after {
   content: "80%";
   position: absolute;
   width: fit-content;
@@ -871,7 +807,7 @@ header .container nav .form i {
   padding: 5px;
 }
 
-.our-skills .skills .prog-holder div.four::before {
+.our-skills .skills .prog-holder.active div.four::before {
   content: "";
   position: absolute;
   top: 0;
@@ -881,7 +817,7 @@ header .container nav .form i {
   background-color: var(--main-color);
 }
 
-.our-skills .skills .prog-holder div.four::after {
+.our-skills .skills .prog-holder.active div.four::after {
   content: "90%";
   position: absolute;
   width: fit-content;
@@ -1059,6 +995,7 @@ header .container nav .form i {
 }
 
 .subscribe .container form {
+  display: flex;
   border: 1px solid white;
 }
 
@@ -1074,6 +1011,13 @@ header .container nav .form i {
   width: 300px;
   height: 60px;
   border: none;
+}
+
+@media (max-width: 767px) {
+  .subscribe .container form {
+    max-width: 250px;
+    font-size: 12px;
+  }
 }
 
 .subscribe .container form input[type="email"]::placeholder {
