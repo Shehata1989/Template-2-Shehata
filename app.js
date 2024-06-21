@@ -1,18 +1,19 @@
-const toggleMenu = document.querySelector('.toggle-menu'),
-ulLinks = document.querySelector('header nav > ul')
+const toggleMenu = document.querySelector(".toggle-menu"),
+  ulLinks = document.querySelector("header nav > ul");
 
-toggleMenu.addEventListener('click', () => {
-  ulLinks.classList.toggle('active')
-})
+toggleMenu.addEventListener("click", () => {
+  ulLinks.classList.toggle("active");
+});
 
-window.addEventListener('click', (e) => {
-if (e.target !== ulLinks && e.target !== toggleMenu) {
-  ulLinks.classList.remove('active')
-}
-})
+window.addEventListener("click", (e) => {
+  if (e.target !== ulLinks && e.target !== toggleMenu) {
+    ulLinks.classList.remove("active");
+  }
+});
 
 // ------------------------------------------------------------
-const secLanding = document.querySelector(".landing");
+const bgLanding = document.querySelector(".landing #img img");
+
 let imgArray = [
   "landing-1.jpg",
   "landing-2.avif",
@@ -20,14 +21,17 @@ let imgArray = [
   "landing-4.avif",
 ];
 
-randomImg(secLanding, imgArray);
+let currentIndex = 0;
 
-function randomImg(element, img) {
-  setInterval(() => {
-    let randomNum = Math.floor(Math.random() * imgArray.length);
-    element.style.backgroundImage = `url(../Image/${img[randomNum]})`;
-  }, 8000);
-}
+setInterval(() => {
+  setTimeout(() => {
+    bgLanding.classList.add("scale");
+  }, 5000);
+  bgLanding.classList.remove("scale");
+  bgLanding.src = "./Image/" + imgArray[currentIndex];
+  currentIndex = (currentIndex + 1) % imgArray.length;
+}, 5000);
+
 // ------------------------------------------------------------
 const secStats = document.querySelector(".stats"),
   span = document.querySelectorAll(".stats .box span");
