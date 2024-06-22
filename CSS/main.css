@@ -251,8 +251,7 @@ header .container nav .form i {
 }
 
 @keyframes zoom {
-  0%
-  {
+  0% {
     transform: scale(1.3);
   }
   25% {
@@ -282,6 +281,12 @@ header .container nav .form i {
   padding: 20px;
 }
 
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+}
+
 .landing .content {
   max-width: 550px;
   padding: 15px;
@@ -305,12 +310,6 @@ header .container nav .form i {
   transform: translatey(-50%);
   color: white;
   font-size: 35px;
-}
-
-@media (max-width: 767px) {
-  .landing .text {
-    width: 100%;
-  }
 }
 /* End Landing */
 /* Start Service */
@@ -372,7 +371,6 @@ header .container nav .form i {
   }
 }
 
-/* Media Mobile */
 /* End Service */
 /* Start Desgin */
 .desgin {
@@ -431,7 +429,7 @@ header .container nav .form i {
   margin-right: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .desgin .desgin-content .image {
     display: none;
   }
